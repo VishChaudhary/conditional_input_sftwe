@@ -1,2 +1,3 @@
 # conditional_input_sftwe
-Push button bounce count
+
+For this code, data from the eight switches is not to be read until a momentary contact pushbutton is pressed. Pressing the pushbutton must set the flag (74HC74). The flip-flop’s Q output is connected to PE0 and its /CLR input is connected to PE1. The D input of the flip-flop is connected to 3.3V (logic 1). The AVR128DB48 must poll the flag (read the output of the flip-flop) to see if it is set. If the flag is not set, the AVR128DB48 goes on to other tasks, and then comes back later and polls the flag. If the flag is set, the AVR128DB48 reads the data from the switches and displays the new value on the bargraph LED. The AVR128DB48 must then clear the flip-flop, acknowledging that it has read the data.
